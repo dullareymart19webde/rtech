@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rtech | Digital Portfolio</title>
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/jpeg" href="Business Logo.jpg">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header-left">
             <div class="logo-box">
-                <img src="logo.png" alt="rtech logo" class="header-logo-img">
+                <img src="Business Logo.jpg" alt="rtech logo" class="header-logo-img">
                 <span class="logo">rtech<span>.</span></span>
             </div>
             <nav class="tab-nav">
@@ -23,6 +23,7 @@
                 <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio')">Digital Portfolio</button>
                 <button class="tab-link" data-target="websites" onclick="switchTab('websites')">Websites</button>
                 <button class="tab-link" data-target="apps" onclick="switchTab('apps')">Apps</button>
+                <button class="tab-link" data-target="contact" onclick="switchTab('contact')">Contact</button>
             </nav>
         </div>
         <div class="header-right">
@@ -113,6 +114,25 @@
                 <i class='bx bx-code-block'></i>
                 <h3>Update in Progress</h3>
                 <p>I am currently refining my software projects and packaging new desktop applications. Check back soon for downloadable tools and systems!</p>
+            </div>
+        </section>
+        <section id="contact" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Get In <span>Touch</span></h2>
+                <p>Have a project in mind or want to collaborate? Send me a message.</p>
+            </div>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/xgoppbel" method="POST" class="contact-form">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="subject" placeholder="Email Subject" required>
+                    </div>
+                    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
             </div>
         </section>
     </main>

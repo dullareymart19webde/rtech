@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header-left">
             <div class="logo-box">
-                <img src="logo.png" alt="rtech logo" class="header-logo-img">
+                <img src="Business Logo.jpg" alt="rtech logo" class="header-logo-img">
                 <span class="logo">rtech<span>.</span></span>
             </div>
             <nav class="tab-nav">
@@ -26,6 +26,7 @@
             </nav>
         </div>
         <div class="header-right">
+            <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
             <a href="https://web.facebook.com/rey.mart.dulla.683911" target="_blank"><i class='bx bxl-facebook'></i></a>
             <a href="mailto:reymartdulla17@gmail.com"><i class='bx bx-envelope'></i></a>
             <a href="my-cv.pdf" download class="btn-outline">Download CV</a>
@@ -190,6 +191,26 @@
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.classList.replace('bx-moon', 'bx-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.replace('bx-moon', 'bx-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.replace('bx-sun', 'bx-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
     </script>
 </body>
 </html>

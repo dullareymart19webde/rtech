@@ -187,13 +187,61 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 rtech | Rey Mart Dulla. All Rights Reserved.</p>
+            <p>&copy; 2026 rtech | Rey Mart Dulla. All Rights Reserved.</p>
             <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="#" onclick="openModal('privacy-modal')">Privacy Policy</a>
+                <a href="#" onclick="openModal('terms-modal')">Terms of Service</a>
             </div>
         </div>
     </footer>
+
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('privacy-modal')"><i class='bx bx-x'></i></button>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <p>Welcome to rtech. Your privacy is important to me. This policy outlines how your information is handled when you visit my digital portfolio.</p>
+            
+            <h3>1. Information Collection</h3>
+            <p>I only collect personal information that you voluntarily provide when using the "Get In Touch" contact form. This includes your Name, Email Address, and the contents of your message.</p>
+            
+            <h3>2. Use of Information</h3>
+            <p>The information collected through the contact form is used strictly for the purpose of responding to your inquiries, professional communication, or discussing potential collaborations.</p>
+            
+            <h3>3. Third-Party Services</h3>
+            <p>This website utilizes Formspree.io to process contact form submissions securely. Formspree may capture standard web data necessary for routing your message. I do not sell, trade, or otherwise transfer your personal information to outside parties.</p>
+            
+            <h3>4. Data Security</h3>
+            <p>While I strive to use commercially acceptable means to protect your personal information submitted via the contact form, please remember that no method of transmission over the Internet is 100% secure.</p>
+            
+            <h3>5. Contact</h3>
+            <p>If you have any questions regarding this Privacy Policy, you may contact me directly at reymartdulla17@gmail.com.</p>
+        </div>
+    </div>
+    
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('terms-modal')"><i class='bx bx-x'></i></button>
+            <h2>Terms of Service</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <p>By accessing and using the rtech digital portfolio, you accept and agree to be bound by the terms and provision of this agreement.</p>
+            
+            <h3>1. Intellectual Property</h3>
+            <p>All content on this website, including text, graphics, logos, images, and software (such as downloadable applications and source codes), is the property of Rey Mart Dulla and is protected by intellectual property laws. You may view and download materials for personal, non-commercial evaluation purposes only.</p>
+            
+            <h3>2. User Conduct</h3>
+            <p>The contact form provided on this website is intended for professional inquiries. You agree not to use this form to transmit any spam, malicious code, or harassing communications.</p>
+            
+            <h3>3. Disclaimer of Warranties</h3>
+            <p>The downloadable desktop applications, web platforms, and source codes featured on this portfolio are provided "as is" for demonstration and educational purposes. While I strive for excellence, I make no warranties regarding the flawless operation of these software projects across all environments.</p>
+            
+            <h3>4. External Links</h3>
+            <p>This portfolio contains links to external websites, including GitHub and live project platforms. I am not responsible for the content or privacy practices of these external sites.</p>
+            
+            <h3>5. Modifications</h3>
+            <p>I reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes signifies your acceptance of the revised terms.</p>
+        </div>
+    </div>
 
     <script>
         function switchTab(tabId) {
@@ -211,6 +259,16 @@
                 targetLink.classList.add("active");
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+            document.body.style.overflow = 'auto';
         }
 
         const themeToggle = document.getElementById('theme-toggle');
